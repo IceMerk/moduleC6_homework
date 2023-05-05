@@ -1,0 +1,162 @@
+/* Секция */
+section {
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Окно чата */
+.chat-body {
+    width: 600px;
+    height: 500px;
+}
+
+/* Оболочка инпута и кнопок */
+.wrapper-input {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10px;
+
+}
+
+/* Инпут */
+.input-text {
+    width: 300px;
+    margin-left: 10px;
+    border-image: linear-gradient(to left top, #663dff, #fe21ec);
+    border-image-slice: 1;
+    font-size: 20px;
+}
+
+.input-text:focus {
+    outline: none;
+}
+
+/* Кнопки */
+.send,
+.geo {
+    width: 130px;
+    height: 40px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+        7px 7px 20px 0px rgba(0, 0, 0, .1),
+        4px 4px 5px 0px rgba(0, 0, 0, .1);
+    outline: none;
+    margin-right: 5px;
+}
+
+.btn-1 {
+    background: #b621fe;
+    border: none;
+    z-index: 1;
+}
+
+.btn-1:after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    background-color: #663dff;
+    border-radius: 5px;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+        7px 7px 20px 0px rgba(0, 0, 0, .1),
+        4px 4px 5px 0px rgba(0, 0, 0, .1);
+    transition: all 0.3s ease;
+}
+
+.btn-1:hover {
+    color: #fff;
+}
+
+.btn-1:hover:after {
+    left: 0;
+    width: 100%;
+}
+
+.btn-1:active {
+    top: 2px;
+}
+
+/* Окно чата */
+.chat {
+    position: relative;
+    margin: 10px 5px 0 10px;
+    width: 560px;
+    height: 400px;
+    border: 2px solid wheat;
+    border-image: linear-gradient(to left top, #663dff, #b91789);
+    border-image-slice: 1;
+    padding: 10px 10px 0 10px;
+    overflow-y: auto;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: sans-serif;
+    word-wrap: break-word;
+}
+
+/* Сообщения пользователя */
+.user {
+    display: flex;
+    justify-content: end;
+    text-align: right;
+}
+
+.user .text {
+    padding: 10px;
+    border: 2px solid #663dff;
+    background-color: #559dd8;
+    color: white;
+    border-radius: 10px;
+}
+
+.user .text a {
+    color: white;
+}
+
+/* Ответ сервера */
+.server {
+    display: flex;
+    justify-content: start;
+}
+
+.server .text {
+    padding: 10px;
+    border: 2px solid #fe21ec;
+    background-color: #d1d1d1;
+    color: #6b6b6b;
+    border-radius: 10px;
+}
+
+/* Строка статуса */
+.statys {
+    position: relative;
+    margin: 0 5px 0 10px;
+    width: 580px;
+    border: 2px solid;
+    border-image: linear-gradient(to left top, #663dff, #fe21ec);
+    border-image-slice: 1;
+}
+
+.statys-text {
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 18px;
+}
